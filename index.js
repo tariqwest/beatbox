@@ -2,7 +2,7 @@ $().ready(function(){
   
   var BeatBox = function(beat, top, left) {
     this.beat = beat;
-    this.$node = $(`<div class="beat-bot ${this.beat}"></div>`);
+    this.$node = $(`<div class="beat-box ${this.beat}"></div>`);
 
     var screenPosition = {
       top: top + 'px',
@@ -18,10 +18,6 @@ $().ready(function(){
 
   BeatBox.prototype.constructore = BeatBox;
 
-  BeatBox.prototype.startAnimate = function() {
-    console.log('animated!', this.$node);
-    this.$node.toggleClass(this.beat + '-animate')
-  }
 
   BeatBox.prototype.startAnimate = function() {
     console.log('animated!', this.$node);
